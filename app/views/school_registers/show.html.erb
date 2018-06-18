@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Roll:</strong>
+  <%= @school_register.roll %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @school_register.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @school_register.age %>
+</p>
+
+<%= link_to 'Edit', edit_school_register_path(@school_register) %> |
+<%= link_to 'Back', school_registers_path %>

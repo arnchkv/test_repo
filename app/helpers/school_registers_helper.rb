@@ -1,0 +1,2 @@
+module SchoolRegistersHelper
+end

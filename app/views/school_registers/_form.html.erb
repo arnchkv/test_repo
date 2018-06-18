@@ -1,0 +1,32 @@
+<%= form_with(model: school_register, local: true) do |form| %>
+  <% if school_register.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(school_register.errors.count, "error") %> prohibited this school_register from being saved:</h2>
+
+      <ul>
+      <% school_register.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :roll %>
+    <%= form.number_field :roll, id: :school_register_roll %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :school_register_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age, id: :school_register_age %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
